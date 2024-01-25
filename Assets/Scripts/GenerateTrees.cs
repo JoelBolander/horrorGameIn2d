@@ -5,13 +5,15 @@ using UnityEngine;
 public class GenerateTrees : MonoBehaviour
 {
     public GameObject prefabToPlace;
-    public int numberOfPrefabs = 10;
+    public int PrefabsPer100 = 10;
     public float minX = 0f;
     public float maxX = 10f;
     public float minY = 0f;
     public float maxY = 10f;
     public int seed = 42;
     public static List<GameObject> Trees = new List<GameObject>();
+
+    private int numberOfPrefabs;
 
     void Start()
     {
@@ -34,10 +36,10 @@ public class GenerateTrees : MonoBehaviour
         }
         Trees.Clear();
 
-        // Set the seed for reproducibility
+        numberOfPrefabs = Mathf.RoundToInt(((Mathf.Abs(minX) + maxX)*(Mathf.Abs(minY)+maxY)/100))*PrefabsPer100;
+
         UnityEngine.Random.InitState(seed);
 
-        // Instantiate prefabs at random positions
         for (int i = 0; i < numberOfPrefabs; i++)
         {
             float randomX = UnityEngine.Random.Range(minX, maxX);
@@ -46,6 +48,7 @@ public class GenerateTrees : MonoBehaviour
             Vector2 randomPosition = new Vector2(randomX, randomY);
 
             GameObject newTree = Instantiate(prefabToPlace, randomPosition, Quaternion.identity);
+            newTree.transform.parent = transform;
 
             Trees.Add(newTree);
         }

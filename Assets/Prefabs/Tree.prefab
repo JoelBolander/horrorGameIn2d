@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 3177957963518198167}
   - component: {fileID: 9032194895600017201}
   - component: {fileID: 8492332989331093073}
+  - component: {fileID: -2157189049372080849}
+  - component: {fileID: -2461724446815598538}
   m_Layer: 0
   m_Name: Tree
-  m_TagString: Untagged
+  m_TagString: Tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -135,19 +137,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ShadowGroup: 0
   m_ComponentVersion: 1
-  m_HasRenderer: 0
+  m_HasRenderer: 1
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000
   m_ShapePath:
-  - {x: -0.5, y: -0.50000006, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: 0.5, y: -0.50000006, z: 0}
-  m_ShapePathHash: 0
+  - {x: -0.5044459, y: 0.0014663339, z: 0}
+  - {x: -0.3490062, y: 0.35780454, z: 0}
+  - {x: 0.0014663935, y: 0.5059122, z: 0}
+  - {x: 0.3695359, y: 0.33727476, z: 0}
+  - {x: 0.5044459, y: -0.000000059604645, z: 0}
+  - {x: 0.34020767, y: -0.35193902, z: 0}
+  - {x: 0.0014663935, y: -0.50444585, z: 0}
+  - {x: -0.33727488, y: -0.3592711, z: 0}
+  m_ShapePathHash: 1517062779
   m_Mesh: {fileID: 0}
-  m_InstanceId: -2688
+  m_InstanceId: 29260
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.000000059604645, z: 0}
-    m_Extent: {x: 0.5, y: 0.5, z: 0}
+    m_Center: {x: 0, y: 0.00073319674, z: 0}
+    m_Extent: {x: 0.5044459, y: 0.50517905, z: 0}
+--- !u!114 &-2157189049372080849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537906517538906961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759f8ce59503cbe459f4aeccc6dd0bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2461724446815598538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537906517538906961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59e4a36558ca98043a004de974bbe5a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 15
