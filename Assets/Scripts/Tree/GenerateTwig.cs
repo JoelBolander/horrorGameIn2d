@@ -10,18 +10,20 @@ public class GenerateTwig : MonoBehaviour
         Vector2 position = new Vector2(treeLocation.x, treeLocation.y);
         if (Random.Range(0, 2) == 1)
         {
-            position.x += Random.Range(1000, 1500)/1000;
+            float a = Random.Range(0.5f, 2f);
+            position.x += a;
         } else
         {
-            position.x -= Random.Range(1000, 1500) / 1000;
+            float b = Random.Range(0.5f, 2f);
+            position.x -= b;
         }
         if (Random.Range(0, 2) == 1)
         {
-            position.y += Random.Range(1000, 1500) / 1000;
+            position.y += Random.Range(0.5f, 2f);
         }
         else
         {
-            position.y -= Random.Range(1000, 1500) / 1000;
+            position.y -= Random.Range(0.5f, 2f);
         }
 
         GameObject newTree = Instantiate(twig, position, Quaternion.identity);
