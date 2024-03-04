@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 3235842}
   - component: {fileID: 3235844}
   - component: {fileID: 3235845}
+  - component: {fileID: 3235846}
   m_Layer: 0
   m_Name: Player
   m_TagString: player
@@ -305,6 +306,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   twigs: 0
+--- !u!114 &3235846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3235839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d056ae531fdab8b47a144c609288b55d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10
+  health: 10
+  healthBar: {fileID: 817026321}
 --- !u!1 &137821559
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,6 +869,7 @@ GameObject:
   - component: {fileID: 817026324}
   - component: {fileID: 817026323}
   - component: {fileID: 817026325}
+  - component: {fileID: 817026326}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -876,8 +893,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 325.2, y: -158.4}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 322.5, y: -144.34}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817026323
 MonoBehaviour:
@@ -938,6 +955,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &817026326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817026321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f1163d7174e5864cbcd408dde3c7ea9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 3235839}
 --- !u!1 &868416079
 GameObject:
   m_ObjectHideFlags: 0
