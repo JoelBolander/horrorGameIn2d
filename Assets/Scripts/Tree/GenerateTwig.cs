@@ -5,8 +5,18 @@ using UnityEngine;
 public class GenerateTwig : MonoBehaviour
 {
     public GameObject twig;
+
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindWithTag("player");
+    }
+
     public void makeTwig(Vector2 treeLocation)
     {
+        player.GetComponent<playerHealth>().takeDamage(1);
+
         Vector2 position = new Vector2(treeLocation.x, treeLocation.y);
         if (Random.Range(0, 2) == 1)
         {
