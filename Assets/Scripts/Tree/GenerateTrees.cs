@@ -11,7 +11,7 @@ public class GenerateTrees : MonoBehaviour
     public float minY = 0f;
     public float maxY = 10f;
     public int seed = 42;
-    public static List<GameObject> Trees = new List<GameObject>();
+    public static List<GameObject> trees = new List<GameObject>();
 
     private int numberOfPrefabs;
 
@@ -30,11 +30,11 @@ public class GenerateTrees : MonoBehaviour
 
     private void Generation ()
     {
-        foreach (var item in Trees)
+        foreach (var item in trees)
         {
             Destroy(item);
         }
-        Trees.Clear();
+        trees.Clear();
 
         numberOfPrefabs = Mathf.RoundToInt(((Mathf.Abs(minX) + maxX)*(Mathf.Abs(minY)+maxY)/100))*PrefabsPer100;
 
@@ -49,8 +49,9 @@ public class GenerateTrees : MonoBehaviour
 
             GameObject newTree = Instantiate(prefabToPlace, randomPosition, Quaternion.identity);
             newTree.transform.parent = transform;
+            newTree.transform.position = new Vector3(newTree.transform.position.x, newTree.transform.position.y, 0);
 
-            Trees.Add(newTree);
+            trees.Add(newTree);
         }
     }
 }

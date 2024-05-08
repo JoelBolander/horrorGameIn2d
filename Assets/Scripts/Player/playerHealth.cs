@@ -54,15 +54,5 @@ public class playerHealth : MonoBehaviour
         {
             redFlash.SetActive(false);
         }
-
-        if (Input.GetKeyDown(KeyCode.L)) 
-        {
-            takeDamage(1);
-        };
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            takeHealing(1);
-        };
     }
 }
