@@ -17,7 +17,6 @@ public class isPlaceable : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         collidingObjects++;
-        Debug.Log("FACK");
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -43,7 +42,7 @@ public class isPlaceable : MonoBehaviour
 
     private void Update()
     {
-        if (collidingObjects == 0)
+        if (collidingObjects == 0 && player.GetComponent<InventoryManager>().twigs >= 25)
         {
             gameObject.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
             placeObjectScr.currentlyPlaceable = true;

@@ -13,6 +13,7 @@ public class playerHealth : MonoBehaviour
     
     [SerializeField] private GameObject healthBar;
     [SerializeField] private GameObject redFlash;
+    [SerializeField] private GameObject gameOverSign;
 
     private void Start()
     {
@@ -53,6 +54,12 @@ public class playerHealth : MonoBehaviour
         if (currentTime-flashTime > flashDuration)
         {
             redFlash.SetActive(false);
+        }
+
+        if (health <= 0)
+        {
+            GetComponent<movement>().enabled = false;
+            gameOverSign.SetActive(true);
         }
     }
 }

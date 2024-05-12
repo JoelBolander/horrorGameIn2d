@@ -8,9 +8,13 @@ public class GenerateTwig : MonoBehaviour
 
     private GameObject player;
 
+    private GameObject twigsParent;
+
     private void Start()
     {
         player = GameObject.FindWithTag("player");
+
+        twigsParent = GameObject.FindWithTag("TwigsParent");
     }
 
     public void makeTwig(Vector2 treeLocation)
@@ -37,5 +41,6 @@ public class GenerateTwig : MonoBehaviour
         }
 
         GameObject newTree = Instantiate(twig, position, Quaternion.identity);
+        newTree.transform.parent = twigsParent.transform;
     }
 }

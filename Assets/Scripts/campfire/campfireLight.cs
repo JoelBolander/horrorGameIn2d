@@ -21,7 +21,11 @@ public class campfireLight : MonoBehaviour
     {
         if (Time.realtimeSinceStartup - time >= waitTime)
         {
-            light.intensity -= 0.01f;
+            light.intensity -= 0.04f;
+            if (light.intensity < 0)
+            {
+                light.intensity = 0;
+            }
             time = Time.realtimeSinceStartup;
         }
     }
